@@ -24,28 +24,42 @@
         }
         #output {
             margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 565px;
         }
         svg {
             max-width: 100%;
+            width: 100%;
             max-height: 500px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container-md">
-        <form id="gridForm">
-            <label for="width" class="form-label">Width (px):</label>
-            <input class="form-control" type="number" id="width" name="width" min="10" value="500" required>
-            <label for="height" class="form-label">Height (px):</label>
-            <input class="form-control" type="number" id="height" name="height" min="10" value="500" required>
-            <label for="cellSize" class="form-label">Cell Size (px) <small>(optional)</small>:</label>
-            <input class="form-control" type="number" id="cellSize" name="cellSize" min="1" placeholder="Auto-calculate">
-            <button type="submit" class="btn btn-primary">✨ Generate Grid ✨</button>
-        </form>
-        <div id="output"></div>
-        
+        <div class="card">
+            <div class="card-header">
+                Grid Generator
+              </div>
+            <form id="gridForm" class="mx-3">
+                <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="width" class="form-label">Width (px):</label>
+                    <input class="form-control" type="number" id="width" name="width" min="10" value="500" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="height" class="form-label">Height (px):</label>
+                    <input class="form-control" type="number" id="height" name="height" min="10" value="500" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="cellSize" class="form-label">Cell Size (px) <small>(optional)</small>:</label>
+                    <input class="form-control" type="number" id="cellSize" name="cellSize" min="1" placeholder="Auto-calculate">
+                </div>
+                </div>
+                <button type="submit" class="btn btn-primary">✨ Generate Grid ✨</button>
+            </form>
+            <div id="output" class="m-3 p-2"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
