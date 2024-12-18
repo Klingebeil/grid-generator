@@ -75,7 +75,7 @@ function generateSvgGrid(width, height, cellSize, margin) {
     linesGroup.setAttribute("id", "lines");
 
     // Add grid lines
-    const lineColor = "rgba(1, 158, 163, 0.5)"; // 50% transparency
+    const lineColor = "#7DCFD1"; // 50% transparency
 
     // Vertical lines
     for (let col = 1; col < cols; col++) {
