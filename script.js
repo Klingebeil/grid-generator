@@ -5,10 +5,11 @@ document.getElementById("gridForm").addEventListener("submit", function (event) 
     const width = parseInt(document.getElementById("width").value, 10);
     const height = parseInt(document.getElementById("height").value, 10);
     const cellSizeInput = document.getElementById("cellSize").value;
+    const useMargin = document.getElementById("useMargin").checked;
     let cellSize = parseInt(cellSizeInput, 10);
 
-    // Minimum margin
-    const margin = 5;
+    // Set margin based on checkbox
+    const margin = useMargin ? 5 : 0;
 
     // Calculate optimal cell size if not provided
     if (!cellSizeInput) {
