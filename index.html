@@ -44,18 +44,24 @@
               </div>
             <form id="gridForm" class="mx-3">
                 <div class="row form-group">
-                <div class="col-md-4">
-                    <label for="width" class="form-label">Width (px/cm/mm):</label>
-                    <input class="form-control" type="number" id="width" name="width" min="10" value="500" required>
+                    <div class="col-md-4">
+                        <label for="width" class="form-label">Width (px/cm/mm):</label>
+                        <input class="form-control" type="number" id="width" name="width" min="10" value="500" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="height" class="form-label">Height (px/cm/mm):</label>
+                        <input class="form-control" type="number" id="height" name="height" min="10" value="500" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cellSize" class="form-label">Cell Size (px/cm/mm) <small>(optional)</small>:</label>
+                        <input class="form-control" type="number" id="cellSize" name="cellSize" min="1" placeholder="Auto-calculate">
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <label for="height" class="form-label">Height (px/cm/mm):</label>
-                    <input class="form-control" type="number" id="height" name="height" min="10" value="500" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="cellSize" class="form-label">Cell Size (px/cm/mm) <small>(optional)</small>:</label>
-                    <input class="form-control" type="number" id="cellSize" name="cellSize" min="1" placeholder="Auto-calculate">
-                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="useMargin" name="useMargin" checked>
+                    <label class="form-check-label" for="useMargin">
+                        Add whitespace around the grid
+                    </label>
                 </div>
                 <button type="submit" class="btn btn-primary">⋆✴︎˚｡⋆ Generate Grid ⊹₊⟡⋆</button>
             </form>
